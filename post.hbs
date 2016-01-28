@@ -1,0 +1,43 @@
+{{!< topbar}}
+<main class="main-uber" role="main">
+    {{#post}}
+        <article class="article-uber" role="article" itemscope itemtype="http://schema.org/Article">
+            <header class="post-header-uber">
+                <div class="post-image-time-holder-uber">
+                    <img class="post-image-uber" src="{{image}}"/>
+                </div>
+                <h1 class="post-title-uber" itemprop="headline">
+                        {{title}}
+                </h1>
+                <time class="post-date-uber" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+                    {{date format='MMM DD, YYYY'}}
+                </time>
+            </header>
+            <div class="post-content-uber" itemprop="articleBody">
+                {{content}}
+            </div>
+            {{#if tags}}
+                <div class="post-tags-uber">
+                    Tags: {{tags separator=" | "}}
+                </div>
+            {{/if}}
+
+            <!-- FB Comments -->
+            <div class="fb-comments" data-href="http://uglyhelmet.com{{url}}" data-width="600" data-numposts="5"></div>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=823823117738018";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        </article>
+    {{/post}}
+    {{#if pagination}}
+        <div class="pagination_uber">
+            {{{pagination}}}
+        </div>
+    {{/if}}
+</main>
+

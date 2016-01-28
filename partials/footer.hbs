@@ -1,0 +1,16 @@
+{{ghost_foot}}
+<script type="text/javascript" src="/assets/js/image-modifiers.js"></script>
+<script type="text/javascript">
+	$(".sidebar-close img").on('click', function() {
+		console.log("clicked");
+		$(".wrapper-uber").removeClass("show-sidebar");
+	})
+
+	$(".top-bar-logo-container-uber .menu-icon").on('click', function() {
+		console.log("clicked");
+		$(".wrapper-uber").addClass("show-sidebar");
+	})
+</script>
+</body>
+</html>
+<!-- Footer -->
