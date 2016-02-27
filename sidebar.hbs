@@ -1,85 +1,39 @@
 {{> header }}
 <body class="{{body_class}}">
-	<div class="wrapper-uber">
-        <header class="top-bar-uber mobile">
-            <div class="top-bar-logo-container-uber">
-                <div class="menu-icon">
-                    <img src="/assets/images/menu-icon.png"/>
-                </div>
-                <div class="table full">
-                    <div class="row">
-                        <div class="cell">
-                            <a href="http://uglyhelmet.com"><h1>The Uglyhelmet</h1></a>
-                        </div>
+	<div id="uh-wrapper">
+        <aside id="uh-sidebar">
+            <div id="uh-sidebar-main">
+                <header id="uh-sidebar-header">
+                    <i class="fa fa-bars"> Uglyhelmet</i>
+                </header>
+                <section id="uh-sidebar-author">
+                    <div id="uh-author-image">
+                        <img src="{{posts.[0].author.image}}{{post.author.image}}" itemprop="image" />
                     </div>
-                </div>
-            </div>
-        </header>    
-        <aside class="sidebar-uber">
-            <header class="sidebar-header-uber">
-                <div class="sidebar-close">
-                    <img src="/assets/images/close-icon.png"/>
-                </div>
-                <div class="sidebar-header-container-uber">
-                    <div class="table">
-                        <div class="row">
-                            <div class="cell">
-                                <a href="http://uglyhelmet.com"><h1>The Uglyhelmet</h1></a>
-                            </div>
-                        </div>
+                    <div id="uh-author-name">
+                        {{posts.[0].author.name }}{{post.author.name}}
                     </div>
-                </div>
-            </header>
-            <div class="author-info-uber">
-                <div class="table">
-                    <div class="cell-centered">
-                        <div class="author-image-uber">
-                            <a href="/about">
-                                <img src="{{posts.[0].author.image}}" itemprop="image" />
-                            </a>
-                        </div>
-                        <div class="author-name-uber">
-                            <p>{{posts.[0].author.name}}</p>
-                        </div>
-                        <div class="author-quote-uber">
-                            <p><i>"Travel far enough, you meet yourself"</i> -  David Mitchell</p>
-                        </div>
+                    <div id="uh-author-bio">
+                        {{posts.[0].author.bio}}{{post.author.bio}}
                     </div>
-                </div>
-            </div>
-            <div class="author-external-links-uber">
-                <div class="inside">
-                    <span class="external-link-holder-uber facebook">
-                        <div class="table-centered">
-                            <div class="cell">
-                                <a href="http://facebook.com/harryjohn671003">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="external-link-holder-uber instagram">
-                        <div class="table-centered">
-                            <div class="cell">
-                                <a href="http://instagram.com/uglyhelmet">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="external-link-holder-uber">
-                        <div class="table-centered">
-                            <div class="cell">
-                                <a href="http://github.com/harry671003">
-                                    <i class="fa fa-github-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </span>
-                    <div class="clear-fix"></div>
-                </div>
+                    <div id="uh-author-links">
+                        <h2>Connect</h2>
+                        <a href="http://facebook.com/harryjohn671003">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="http://instagram.com/uglyhelmet">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="http://github.com/harry671003">
+                            <i class="fa fa-github-square"></i>
+                        </a>
+                    </div>
+                </section>
+
             </div>
         </aside>
+        
+
         <div class="post-list-uber">
             {{{body}}}
         </div>

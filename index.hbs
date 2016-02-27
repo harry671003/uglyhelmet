@@ -1,4 +1,24 @@
 {{!< sidebar}}
+
+<main id="uh-main" role="main">
+	{{#foreach posts}}
+		<article class="uh-post-tile" role="article" itemscope itemtype="http://schema.org/Article">
+			<div class="uh-post-header" style="background-image: url({{image}})">
+				<div class="uh-post-info">
+					<time class="uh-post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+						{{date format='MMM DD, YYYY'}}
+					</time>
+					<h1 class="uh-post-title">{{title}}</h1>
+				</div>
+			</div>
+			<section class="uh-post-excerpt">
+				{{excerpt words=150}}
+			</section>
+			<a class="uh-post-readMore" href="{{url}}">READ MORE</a>
+		</article>
+	{{/foreach}}
+</main>
+<!--
 <main class="main-uber" role="main">
 	{{#foreach posts}}
 		<article class="article-uber" role="article" itemscope itemtype="http://schema.org/Article">
@@ -31,4 +51,5 @@
 	    </footer>
 	{{/if}}
 </main>
+-->
 
