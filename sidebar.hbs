@@ -1,18 +1,32 @@
 {{> header }}
 <body class="{{body_class}}">
 	<div id="uh-wrapper">
+        <header id="uh-topbar">
+            <i id="uh-show-sidebar" class="fa fa-bars"></i>
+            <a href="/"><span>Ugly</span>
+            <i class="fa fa-bicycle"></i>
+            <span>Helmet</span></a>
+        </header>
+
         <aside id="uh-sidebar">
             <div id="uh-sidebar-main">
+                <div id="uh-hide-sidebar">
+                    <i class="fa fa-times"></i>
+                </div>
                 <header id="uh-sidebar-header">
-                    <i class="fa fa-bars"> Uglyhelmet</i>
+                    <a href="/"><span>Ugly</span>
+                    <i class="fa fa-bicycle"></i>
+                    <span>Helmet</span></a>
                 </header>
                 <section id="uh-sidebar-author">
+                    <a href="/about">
                     <div id="uh-author-image">
                         <img src="{{posts.[0].author.image}}{{post.author.image}}" itemprop="image" />
-                    </div>
+                    </div></a>
+                    <a href="/about">
                     <div id="uh-author-name">
                         {{posts.[0].author.name }}{{post.author.name}}
-                    </div>
+                    </div></a>
                     <div id="uh-author-bio">
                         {{posts.[0].author.bio}}{{post.author.bio}}
                     </div>
