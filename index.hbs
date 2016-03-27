@@ -6,10 +6,12 @@
 			<a href="{{url}}">
 				<div class="uh-post-header" style="background-image: url({{image}})">
 					<div class="uh-post-info">
-						<time class="uh-post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-							{{date format='MMM DD, YYYY'}}
-						</time>
-						<h1 class="uh-post-title">{{title}}</h1>
+						<div class="uh-post-info-container">
+							<time class="uh-post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+								{{date format='MMM DD, YYYY'}}
+							</time>
+							<h1 class="uh-post-title">{{title}}</h1>
+						</div>
 					</div>
 				</div>
 			</a>
@@ -20,38 +22,3 @@
 		</article>
 	{{/foreach}}
 </main>
-<!--
-<main class="main-uber" role="main">
-	{{#foreach posts}}
-		<article class="article-uber" role="article" itemscope itemtype="http://schema.org/Article">
-			<header class="post-header-uber">
-				<time class="post-date-uber" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-					{{date format='MMM DD, YYYY'}}
-				</time>
-				<a href="{{{url}}}" rel="bookmark" class="post-link-uber">
-					<img class="post-image-uber" src="{{image}}"/>
-					<h1 class="post-title-uber" itemprop="headline">
-						{{title}}
-					</h1>
-					<div class="post-content-uber" itemprop="articleBody">
-						{{excerpt words=40}}
-					</div>
-				</a>
-				{{#if tags}}
-					<div class="post-tags-uber">
-						Tags: <span>{{tags separator=" | "}}</span>
-					</div>
-				{{/if}}
-			</header>
-		</article>
-	{{/foreach}}
-	{{#if pagination}}
-	    <footer class="pagination-holder-uber">
-	        <div class="pagination-uber">
-	            {{{pagination}}}
-	        </div>
-	    </footer>
-	{{/if}}
-</main>
--->
-
